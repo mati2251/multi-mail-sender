@@ -39,7 +39,7 @@ fun main(args: Array<String>) {
                     println("Column Mail is not define or item in column is empty")
                 }
                 else{
-                    MailOperation.sendMail(mail, title!!, tmpContent)
+                    MailOperation.sendMail(mail, title!!, tmpContent, propertiesFileName)
                 }
             }
         }

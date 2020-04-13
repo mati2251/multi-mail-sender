@@ -36,6 +36,14 @@ dependencies {
     implementation 'com.github.doyaaaaaken:kotlin-csv-jvm:0.7.3'
 }
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'src.AppKt'
+    }
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+
+}
+
 application {
     // Define the main class for the application.
     mainClassName = 'src.AppKt'
