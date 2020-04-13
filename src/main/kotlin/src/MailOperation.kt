@@ -37,7 +37,7 @@ object MailOperation {
             message.subject = title
             message.setText(text)
             Transport.send(message)
-            println("MAIL SANDED")
+            println("MAIL SEND TO $to")
         } catch (e: MessagingException) {
             throw e
         }
